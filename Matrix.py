@@ -25,7 +25,7 @@ def matrixCreator():
     matrixWindow.mainloop()
 
 def matrixRetrieve(matrix, x, y, window):
-    matrixContent = [[matrix[i][j].get() for i in range(x)] for j in range(y)]
+    matrixContent = [[int(matrix[i][j].get()) for i in range(x)] for j in range(y)]
     Label(window, text="Enter basic columns: ").grid(row=x+2,column=0)
 
     #Get Basic Variables
@@ -40,22 +40,23 @@ def matrixRetrieve(matrix, x, y, window):
 
 
 #SEEK MATRIX DIMENSION WINDOW
-root = Tk()
-root.title("Matrix")
+if __name__ == "__main__":
+    root = Tk()
+    root.title("Matrix")
 
-mylabel = Label(root, text = "Enter Matrix Dimensions Below:")
-mylabel.pack()
+    mylabel = Label(root, text = "Enter Matrix Dimensions Below:")
+    mylabel.pack()
 
-entry1 = Entry(root, width=15, borderwidth=3)
-entry1.pack(side=LEFT)
+    entry1 = Entry(root, width=15, borderwidth=3)
+    entry1.pack(side=LEFT)
 
-label2 = Label(root, text="X")
-label2.pack(side=LEFT)
+    label2 = Label(root, text="X")
+    label2.pack(side=LEFT)
 
-entry2 = Entry(root, width=15, borderwidth=3)
-entry2.pack(side=LEFT)
+    entry2 = Entry(root, width=15, borderwidth=3)
+    entry2.pack(side=LEFT)
 
-dimButton = Button(root, text="Enter", padx = 10, pady = 5, command = matrixCreator)
-dimButton.pack(side=LEFT)
+    dimButton = Button(root, text="Enter", padx = 10, pady = 5, command = matrixCreator)
+    dimButton.pack(side=LEFT)
 
-root.mainloop()
+    root.mainloop()
