@@ -21,8 +21,13 @@ def simplexSolver(matrix, basic):
         else:
             print("in else")
             print("The Biggest Negative Index is: " + str(biggestNegativeIndex))
-            pivotIndex = minimum_Theta_ratios(matrix, biggestNegativeIndex, lastColumn)
-            print("The Pivot Index is: " + str(pivotIndex))
+
+            pivotColumnIndex = biggestNegativeIndex
+            pivotRowIndex = minimum_Theta_ratios(matrix, pivotColumnIndex, lastColumn)
+
+            print("The Pivot Index is: " + str(pivotRowIndex))
+
+            matrix = manipulatingRows(matrix, pivotRowIndex, pivotColumnIndex)
 
             exit()
 
@@ -65,9 +70,31 @@ def minimum_Theta_ratios(matrix, columnIndex, lastColumn):
 
     print(thetavals)
     #Minimum works for all generator objects
-    pivotIndex = thetavals.index(min(value for value in thetavals if value > 0))
+    pivotRowIndex = thetavals.index(min(value for value in thetavals if value > 0))
 
-    return pivotIndex
+    return pivotRowIndex
 
 
-def 
+def manipulatingRows(matrix, pivot_RowIndex, pivot_ColumnIndex):
+    print("Manipulating rows")
+    pivotEntry = matrix[pivot_RowIndex][pivot_ColumnIndex]
+
+    #Part 1
+    for i in range(len(matrix)):
+        matrix[pivot_RowIndex][i] = matrix[pivot_RowIndex][i] / pivotEntry
+
+    print(matrix)
+
+    #Part 2
+    for rowIndex in range(len(matrix[0])):
+        if rowIndex == pivot_RowIndex:
+            continue
+        else:
+            pivotColumn_Entry = matrix[rowIndex][pivot_ColumnIndex]
+            multiple = -(pivotColumn_Entry/pivotEntry)
+            for columnIndex in range(len(matrix)):
+                matrix[rowIndex][i] = matrix[rowIndex][i] + multiple*matrix[rowIndex][columnIndex]
+
+    print(matrix)
+    return matrix
+
