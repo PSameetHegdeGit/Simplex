@@ -1,2 +1,2 @@
 # Simplex
-Implementing the Simplex Algorithm
+Still in Progress ~ A simplex calculator using traditional simplex algorithm; may rewrite to use dual simplex algorithm
