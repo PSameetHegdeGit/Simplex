@@ -1,0 +1,54 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* For simplex_ask.html*/
+#enter{
+    display: flex;
+    justify-content: center;
+}
+
+.dimensions{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+}
+
+.dimensions p{
+    margin: 10px;
+}
+
+.submit{
+    margin:30px;
+    display:flex;
+    justify-content: center;
+}
+
+.submit input{
+    padding: 10px;
+}
+
+/* For simplex_dimensions.html */
+#coeffHeader {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#matrix{
+    height: 75vh;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.row{
+    margin: auto;
+}
+
+.matrix_inputs{
+    margin: 10px;
+    width: 30px;
+}
