@@ -19,3 +19,7 @@ def solver(data):
     return simplexSolver(data)
 
 
+if __name__ == "__main__":
+    app.run()
+
+
