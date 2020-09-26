@@ -1,17 +1,14 @@
-from numpyNotes import *
-import numpy as np
 
-def simplexSolver(matrix, basic):
-    #basicVar = [basic[i].get() for i in range(len(basic))]
+
+
+def simplexSolver(matrix):
     print(matrix)
     columnLastIndex = len(matrix[0]) - 1
     rowLastIndex = len(matrix) - 1
 
-    #print(basicVar)
 
     while True:
 
-        #lastcolumn will =  a reference to matrix's last array
         lastColumn = matrix[rowLastIndex]
 
         objectiveRow = [matrix[i][columnLastIndex] for i in range(len(matrix))]
@@ -24,7 +21,7 @@ def simplexSolver(matrix, basic):
             print("Final matrix is: " + str(matrix))
             print("Final Solution: " + str(zValue))
 
-            exit()
+            return {'matrix': matrix, 'optimalvalue': zValue}
         else:
             print("in else")
             print("The Biggest Negative Index is: " + str(biggestNegativeIndex))
@@ -46,8 +43,6 @@ def find_min_of_obj(objectiveRow):
     print(objectiveRow)
 
     minimum = None
-
-    #Last entry is z value
 
     print("Objective Row: " + str(objectiveRow))
 
@@ -80,7 +75,6 @@ def minimum_Theta_ratios(matrix, columnIndex, lastColumn):
             thetavals.append(0)
 
     print(thetavals)
-    #Minimum works for all generator objects
     pivotRowIndex = thetavals.index(min(value for value in thetavals if value > 0))
 
     return pivotRowIndex

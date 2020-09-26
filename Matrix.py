@@ -35,7 +35,7 @@ def matrixRetrieve(matrix, x, y, window):
         basic.append(cell)
         cell.grid(row=x+2, column=m+1)
 
-    Button(window, text="Enter Basic Variables", command=lambda: simplexSolver(matrixContent, basic)).grid(row=x+2, column=y+1)
+    Button(window, text="Enter Basic Variables", command=lambda: simplexSolver(matrixContent)).grid(row=x+2, column=y+1)
 
 
 
