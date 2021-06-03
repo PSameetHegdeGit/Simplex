@@ -12,4 +12,5 @@ Below is information about the traditional simplex algorithm and linear optimiza
 Along with the backend included in this repo, I also included a simple user interface written in JavaScript, HTML, and CSS. The Frontend communicates with the Backend via Flask. Both the Backend and Frontend are deployed on Heroku.
 
 Below is the link for the User Interface:
+
 (https://simplex-frontend.herokuapp.com/)
