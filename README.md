@@ -17,4 +17,4 @@ https://github.com/PSameetHegdeGit/Simplex-FrontEnd
 
 Below is the link for the User Interface:
 
-(https://simplex-frontend.herokuapp.com/)
+https://simplex-frontend.herokuapp.com/
