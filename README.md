@@ -5,7 +5,7 @@ This project implements a Simplex Calculator using the traditional simplex algor
 A common way to use the simplex algorithm is by constructing a tableau and then following a set of steps. This is the approach that my algorithm takes where the tableau is represented as an n-dimensional list in Python.
 
 Below is information about the traditional simplex algorithm and linear optimization problems:  
-(http://www.optimization-online.org/DB_FILE/2004/10/969.pdf)
+http://www.optimization-online.org/DB_FILE/2004/10/969.pdf
 
 ---
 
@@ -13,7 +13,7 @@ Along with the backend included in this repo, I also included a simple user inte
 
 Below is the Git Repo for the User Interface:
 
-(https://github.com/PSameetHegdeGit/Simplex-FrontEnd)
+https://github.com/PSameetHegdeGit/Simplex-FrontEnd
 
 Below is the link for the User Interface:
 
