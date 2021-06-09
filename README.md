@@ -1,4 +1,4 @@
-## Simplex
+## Linear Optimization with Traditional Simplex Algorithm
 
 This project implements a Simplex Calculator using the traditional simplex algorithm. The simplex algorithm is used to solve linear optimization problems in which we are given a set of n-dimensional inequalities (has n variables) that act as constraints for some formula of which we would like to optimize.
 
